@@ -15,7 +15,7 @@ function Header() {
 function SpecialOffers() {
   return (
     <VStack grow={1} align='center' bg='orange.200' p='16'>
-      <Heading as='h2' size='2xl' noOfLines={1}>Special Offers</Heading>
+      <Heading as='h2' size='2xl'>Special Offers</Heading>
       <Text fontSize='lg' p='4'>
         Never one to turn down a good offer to learn!
       </Text>
