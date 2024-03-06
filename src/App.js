@@ -4,8 +4,8 @@ import { BulbIcon, NestIcon, WafflesIcon } from './components/Icons';
 function Header() {
   return (
     <>
-      <VStack grow={1} align='center' bg='blue.300' p='8'>
-        <Heading as='h1' size='3xl' noOfLines={1} color='blue.900'>Project Snack Shop</Heading>
+      <VStack grow={1} align='center' bg='blue.300' p='16'>
+        <Heading as='h1' color='blue.900' size='4xl'>Project Snack Shop</Heading>
       </VStack>
       <Box grow={1} height={2} bg='black'></Box>
     </>
