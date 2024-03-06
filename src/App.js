@@ -1,26 +1,48 @@
-import { Heading, Box, Button, Text, Container, VStack } from '@chakra-ui/react'
+import { Heading, Box, Text, VStack, HStack } from '@chakra-ui/react'
+import { BulbIcon, NestIcon, WafflesIcon } from './components/Icons';
+
+function Header() {
+  return (
+    <>
+      <VStack grow={1} align='center' bg='blue.300' p='8'>
+        <Heading as='h1' size='3xl' noOfLines={1} color='blue.900'>Project Snack Shop</Heading>
+      </VStack>
+      <Box grow={1} height={2} bg='black'></Box>
+    </>
+  )
+}
+
+function SpecialOffers() {
+  return (
+    <VStack grow={1} align='center' bg='orange.200' p='16'>
+      <Heading as='h2' size='2xl' noOfLines={1}>Special Offers</Heading>
+      <Text fontSize='lg' p='4'>
+        Never one to turn down a good offer to learn!
+      </Text>
+      <HStack fontFamily='monospace' fontSize='20'>
+        <VStack>
+          <NestIcon boxSize='32' />
+          <Text>Nest Offer!</Text>
+        </VStack>
+        <VStack>
+          <BulbIcon boxSize='32' />
+          <Text>Bulb Offer</Text>
+        </VStack>
+        <VStack>
+          <WafflesIcon boxSize='32' />
+          <Text>Waffles Offer</Text>
+        </VStack>
+      </HStack>
+    </VStack>
+  )
+}
 
 function App() {
   return (
-    <Container maxW='3xl' centerContent>
-      <VStack spacing={6} align='stretch'>
-        <Box maxW='64rem'>
-          <Heading as='h1' size='3xl' noOfLines={1}>Project Snack Shop</Heading>
-          <Text fontSize='x1'>
-            A delicious place to practice building quality software.
-          </Text>
-        </Box>
-        <Box maxW='64rem'>
-          <Heading as='h2' size='2xl' noOfLines={1}>Special Offers</Heading>
-          <Text fontSize='x1'>
-            Never one to turn down a good offer to learn!
-          </Text>
-          <Button size='lg' colorScheme='green' mt='24px'>
-            Start small, dream big!
-          </Button>
-        </Box>
-      </VStack>
-    </Container>
+    <>
+      <Header />
+      <SpecialOffers />
+    </>
   );
 }
 
